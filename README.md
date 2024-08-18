@@ -80,40 +80,42 @@ API documentation is available at [http://localhost:3000/api](http://localhost:3
 
 ### Endpoints
 
-- **GET /items**: Retrieve a list of items.
-- **GET /items/:id**: Retrieve a single item by ID.
-- **POST /items**: Create a new item.
-- **PUT /items/:id**: Update an existing item.
-- **DELETE /items/:id**: Delete an item by ID.
+- **GET /users/**: Retrieve a list of users.
+- **GET /users/:id**: Retrieve a single user by ID.
+- **POST /users**: Create a user.
+- **PUT /users/:id**: Update an existing users.
+- **DELETE /users/:id**: Delete a user by ID.
+- **POST /users/:id/profiles**: Create a user profile.
+- **POST /users/:id/posts**: Create a user post.
 
 ### Example Requests
 
-- **Create Item**
+- **Create user**
 
   ```bash
-  curl -X POST http://localhost:3000/items \
+  curl -X POST http://localhost:3000/users \
   -H "Content-Type: application/json" \
-  -d '{"name": "Sample Item", "description": "This is a sample item."}'
+  -d '{"name": "Sample user", "description": "This is a sample user."}'
   ```
 
-- **Get Items**
+- **Get users**
 
   ```bash
-  curl http://localhost:3000/items
+  curl http://localhost:3000/users
   ```
 
-- **Update Item**
+- **Update user**
 
   ```bash
-  curl -X PUT http://localhost:3000/items/1 \
+  curl -X PUT http://localhost:3000/users/1 \
   -H "Content-Type: application/json" \
-  -d '{"name": "Updated Item", "description": "This item has been updated."}'
+  -d '{"name": "Updated user", "description": "This user has been updated."}'
   ```
 
-- **Delete Item**
+- **Delete user**
 
   ```bash
-  curl -X DELETE http://localhost:3000/items/1
+  curl -X DELETE http://localhost:3000/users/1
   ```
 
 ## Contributing
